@@ -1,0 +1,90 @@
+📌 Database MySQL
+Database: dbbasreng
+Tabel utama:
+1.	admin
+o	id_admin (INT, PK, AUTO)
+o	username (VARCHAR)
+o	password (VARCHAR, MD5 encrypted)
+2.	produk
+o	id_produk (INT, PK, AUTO)
+o	nama_produk (VARCHAR)
+o	harga (INT)
+o	gambar (VARCHAR)
+o	deskripsi (TEXT)
+3.	pesanan
+o	id_pesanan (INT, PK, AUTO)
+o	nama_pemesan (VARCHAR)
+o	alamat (TEXT)
+o	no_hp (VARCHAR)
+o	id_produk (INT, FK → produk)
+o	jumlah (INT)
+o	total_harga (INT)
+o	status (ENUM: ‘Pending’, ‘Diproses’, ‘Selesai’)
+________________________________________
+📌 Halaman Frontend (User)
+1.	Home (index.php)
+o	Navbar (Home | Produk | Pesan | Login Admin)
+o	Banner toko (Bootstrap carousel/gambar bs1.jpg)
+o	Daftar produk (Card Bootstrap 5):
+	Basreng Pedas Daun Jeruk (gambar: bs2.jpg)
+	Basreng Original (gambar: bs3.jpg)
+	Basreng Pedes Balado (gambar: bs4.jpg)
+o	Tombol “Pesan Sekarang” → arah ke pesanan.php.
+2.	Halaman Pemesanan (pesanan.php)
+o	Form input:
+	Nama pemesan
+	Alamat lengkap
+	Nomor HP
+	Pilih produk (dropdown → ambil dari tabel produk)
+	Jumlah (number)
+o	Hitung otomatis total harga (JS / PHP)
+o	Tombol “Kirim Pesanan”
+3.	Konfirmasi Pesanan (setelah submit)
+o	Pesan sukses + nomor pesanan
+o	Pesanan tersimpan ke database pesanan.
+________________________________________
+📌 Halaman Backend (Admin)
+1.	Login (login.php)
+o	Form login admin (username + password).
+o	Password disimpan di DB dalam MD5.
+o	Jika login sukses → redirect ke admin/dashboard.php.
+2.	Dashboard (admin/dashboard.php)
+o	Ringkasan jumlah pesanan (pending/diproses/selesai).
+o	Ringkasan produk.
+3.	Kelola Produk (admin/kelola_produk.php)
+o	Tabel list produk: nama, harga, gambar, deskripsi.
+o	Tombol Edit & Hapus.
+o	Tombol “Tambah Produk Baru” → ke tambah_produk.php.
+4.	Tambah Produk (admin/tambah_produk.php)
+o	Form input produk (nama, harga, upload gambar, deskripsi).
+o	Disimpan ke tabel produk.
+5.	Kelola Pesanan (admin/data_pesanan.php)
+o	Tabel daftar pesanan: nama pemesan, alamat, no hp, produk, jumlah, total, status.
+o	Admin bisa ubah status: Pending → Diproses → Selesai.
+o	Bisa filter pesanan berdasarkan status.
+6.	Logout (admin/logout.php)
+o	Destroy session admin → kembali ke login.
+________________________________________
+📌 Desain Tampilan (Bootstrap 5)
+•	Navbar (dark mode, fixed-top)
+o	Brand: “Toko Basreng Enndhhull”
+o	Menu: Home, Produk, Pesan, Login Admin
+•	Card Produk
+o	Gambar produk (bs2.jpg, bs3.jpg, bs4.jpg)
+o	Nama + harga
+o	Tombol “Pesan”
+•	Form Pemesanan
+o	Menggunakan Bootstrap form-control
+o	Button btn btn-success w-100
+•	Admin Dashboard
+o	Layout 2 kolom (Sidebar + Content)
+o	Sidebar (menu: Dashboard, Produk, Pesanan, Logout)
+o	Konten tabel dengan Bootstrap table table-striped table-hover.
+________________________________________
+📌 Alur Aplikasi
+1.	User buka index.php → lihat produk → klik pesan.
+2.	Isi form pesanan → simpan ke database → tampil nomor pesanan.
+3.	Admin login → kelola produk & pesanan.
+4.	Admin update status pesanan (Pending/Diproses/Selesai).
+5.	User bisa cek status pesanan via konfirmasi admin (opsional).
+

@@ -1,0 +1,31 @@
+Curriculum Vitae
+Data Pribadi
+•	Nama : Yasmine Ayu Adinda
+•	Tempat, Tanggal Lahir : Banjarnegara, 23-06-2009
+•	Alamat : Krandegan RT 02/ RW 02, Banjarnegara, Banjarnegara
+•	Jenis Kelamin : Perempuan
+•	Agama : Islam
+•	No. HP : 085157749739
+•	Email : ayuadindayasmine@gmail.com
+________________________________________
+Riwayat Pendidikan
+•	2015 – 2021 : SD Negeri 3 Kutabanjarnegara
+•	2021 – 2024 : SMP Negeri 1 Banjarnegara
+•	2024 – Sekarang : SMK Negeri 1 Bawang
+________________________________________
+Keahlian / Skill
+•	Coding & Pemrograman:
+o	HTML, CSS, JavaScript (dasar pembuatan website)
+o	PHP & MySQL (membuat aplikasi berbasis web dan database)
+o	Python (dasar pemrograman)
+•	Desain Web:
+o	Bootstrap / Tailwind CSS
+•	Database Management:
+o	MySQL
+•	Office Tools:
+o	Microsoft Word, Excel, PowerPoint
+________________________________________
+Pengalaman / Proyek (jika ada)
+•	Membuat website sederhana untuk pemesanan makanan online
+•	Membuat sistem login & register berbasis PHP dan MySQL
+•	Desain landing page sekolah dengan HTML & CSS
