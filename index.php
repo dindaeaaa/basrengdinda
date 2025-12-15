@@ -5,7 +5,7 @@ include 'header.php';
 
 <div class="p-5 mb-4 bg-light rounded-3 text-center" style="background-image: url('assets/img/bs1.jpg'); background-size: cover; background-position: center;">
     <div class="container-fluid py-5" style="background-color: rgba(255,255,255,0.7);">
-        <h1 class="display-5 fw-bold">Selamat Datang di Toko Basreng Enndhhull!</h1>
+        <h1 class="display-5 fw-bold">Welcome di Toko Basreng Enndhhull!</h1>
         <p class="fs-4">Basreng paling enak se-Nusantara. Cobain sekarang!</p>
         <a class="btn btn-primary btn-lg" href="pesanan.php" role="button">Pesan Sekarang</a>
     </div>
